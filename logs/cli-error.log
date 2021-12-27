@@ -1,0 +1,100 @@
+2021-12-25 16:40:45 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'pweb2_a.customer' doesn't exist in C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 132
+Stack Trace:
+#0 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'customer', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(61): Cake\Database\Schema\Collection->describe('customer', Array)
+#2 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\ORM\Table.php(566): Cake\Database\Schema\CachedCollection->describe('customer')
+#3 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\ORM\Table.php(691): Cake\ORM\Table->getSchema()
+#4 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'customer', 'Customer')
+#7 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Customer')
+#8 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\bake\src\Shell\BakeShell.php(282): Bake\Shell\Task\ModelTask->main('Customer')
+#9 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(64): Bake\Shell\BakeShell->Bake\Shell\{closure}('Customer', 0)
+#10 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\bake\src\Shell\BakeShell.php(283): Cake\Collection\Collection->each(Object(Closure))
+#11 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Console\Shell.php(517): Bake\Shell\BakeShell->all('customer')
+#12 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#13 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 C:\Users\user\Documents\P_WEB_2\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'pweb2_a.customer' doesn't exist in C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 37
+Stack Trace:
+#0 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(37): PDOStatement->execute(NULL)
+#1 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(173): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Database\Connection.php(358): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#5 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Database\Connection.php(361): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Database\Connection.php(310): Cake\Database\Connection->query('SHOW FULL COLUM...')
+#7 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#8 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Database\Connection.php(314): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#9 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(130): Cake\Database\Connection->execute('SHOW FULL COLUM...', Array)
+#10 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'customer', Array, Object(Cake\Database\Schema\TableSchema))
+#11 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(61): Cake\Database\Schema\Collection->describe('customer', Array)
+#12 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\ORM\Table.php(566): Cake\Database\Schema\CachedCollection->describe('customer')
+#13 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\ORM\Table.php(691): Cake\ORM\Table->getSchema()
+#14 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#15 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#16 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'customer', 'Customer')
+#17 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Customer')
+#18 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\bake\src\Shell\BakeShell.php(282): Bake\Shell\Task\ModelTask->main('Customer')
+#19 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(64): Bake\Shell\BakeShell->Bake\Shell\{closure}('Customer', 0)
+#20 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\bake\src\Shell\BakeShell.php(283): Cake\Collection\Collection->each(Object(Closure))
+#21 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Console\Shell.php(517): Bake\Shell\BakeShell->all('customer')
+#22 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#23 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#24 C:\Users\user\Documents\P_WEB_2\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#25 {main}
+
+
+2021-12-25 16:41:21 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'pweb2_a.customer' doesn't exist in C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 132
+Stack Trace:
+#0 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'customer', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(61): Cake\Database\Schema\Collection->describe('customer', Array)
+#2 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\ORM\Table.php(566): Cake\Database\Schema\CachedCollection->describe('customer')
+#3 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\ORM\Table.php(691): Cake\ORM\Table->getSchema()
+#4 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#5 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'customer', 'Customer')
+#7 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Customer')
+#8 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\bake\src\Shell\BakeShell.php(282): Bake\Shell\Task\ModelTask->main('Customer')
+#9 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(64): Bake\Shell\BakeShell->Bake\Shell\{closure}('Customer', 0)
+#10 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\bake\src\Shell\BakeShell.php(283): Cake\Collection\Collection->each(Object(Closure))
+#11 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Console\Shell.php(517): Bake\Shell\BakeShell->all('customer')
+#12 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#13 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 C:\Users\user\Documents\P_WEB_2\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'pweb2_a.customer' doesn't exist in C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 37
+Stack Trace:
+#0 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(37): PDOStatement->execute(NULL)
+#1 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(173): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Database\Connection.php(358): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#5 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Database\Connection.php(361): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Database\Connection.php(310): Cake\Database\Connection->query('SHOW FULL COLUM...')
+#7 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#8 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Database\Connection.php(314): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#9 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(130): Cake\Database\Connection->execute('SHOW FULL COLUM...', Array)
+#10 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(98): Cake\Database\Schema\Collection->_reflect('Column', 'customer', Array, Object(Cake\Database\Schema\TableSchema))
+#11 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(61): Cake\Database\Schema\Collection->describe('customer', Array)
+#12 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\ORM\Table.php(566): Cake\Database\Schema\CachedCollection->describe('customer')
+#13 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\ORM\Table.php(691): Cake\ORM\Table->getSchema()
+#14 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#15 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#16 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'customer', 'Customer')
+#17 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Customer')
+#18 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\bake\src\Shell\BakeShell.php(282): Bake\Shell\Task\ModelTask->main('Customer')
+#19 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(64): Bake\Shell\BakeShell->Bake\Shell\{closure}('Customer', 0)
+#20 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\bake\src\Shell\BakeShell.php(283): Cake\Collection\Collection->each(Object(Closure))
+#21 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Console\Shell.php(517): Bake\Shell\BakeShell->all('customer')
+#22 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#23 C:\Users\user\Documents\P_WEB_2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#24 C:\Users\user\Documents\P_WEB_2\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#25 {main}
+
+
